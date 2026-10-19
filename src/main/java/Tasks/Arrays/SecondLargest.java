@@ -12,15 +12,23 @@ public class SecondLargest {
         for(int i=0; i < num.length;i++){
 
             if(num[i]>largest){
+
                 secondLargest = largest;
+
                 largest = num[i];
+
+                System.out.println(largest);
+
             } else if (num[i]> secondLargest && num[i] != largest) {
+
                 secondLargest = num[i];
+
+                System.out.println(secondLargest);
             }
         }
 
-        System.out.println(largest);
-        System.out.println(secondLargest);
+//        System.out.println(largest);
+//        System.out.println(secondLargest);
     }
 //        int[] arr = {10,50,20,40,30,60};
 //

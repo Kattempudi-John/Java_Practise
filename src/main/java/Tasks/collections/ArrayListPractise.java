@@ -1,39 +1,47 @@
 package Tasks.collections;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ArrayListPractise {
 
     public static void main(String[] args) {
 
-        List<String> skills = new java.util.ArrayList<>();
+        List<String> subject = new ArrayList<>();
 
-        skills.add("Java");
-        skills.add("Selenium");
-        skills.add("TestNG");
-        skills.add("RestAssured");
-        skills.add("Postman");
+        subject.add("Java");
+        subject.add("selenium");
+        subject.add("Java");
+        subject.add("Rest Assured");
 
-        for(int i=0; i< skills.toArray().length;i++){
-            System.out.println(skills.get(i));
+        System.out.println(subject);
+
+        System.out.println("3rd subject is: "+ subject.get(2));
+
+        subject.remove(2);
+
+        System.out.println("subjects after removing java: " + subject);
+
+        for(int i =0 ; i < subject.size();i++){
+            System.out.println(subject.get(i));
         }
 
-        System.out.println(skills.get(0));
-
-        System.out.println(skills.get(2));
-
-        System.out.println(skills.size());
-
-        skills.remove("Postman");
-
-
-        for(int i=0; i< skills.size();i++){
-            System.out.println(skills);
+        for(String subjects: subject){
+            System.out.println(subjects);
         }
 
-        for(String skill: skills){
-            System.out.println(skill);
-        }
+        subject.add(2, "SQL");
+
+        System.out.println(subject);
+
+        subject.set(1, "Playwright");
+
+        System.out.println(subject);
+
+        System.out.println(subject.contains("Playwright"));
+
+        System.out.println(subject.isEmpty());
 
     }
 }
