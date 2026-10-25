@@ -15,38 +15,32 @@ public class ArrayListDuplicate {
 
     public static void main(String[] args) {
 
-        List<String> products = new ArrayList<>();
+        List<String> product = new ArrayList<>();
 
-        products.add("Laptop");
-        products.add("Mobile");
-        products.add("Tablet");
-        products.add("Laptop");
-        products.add("Laptop");
-        products.add("Mobile");
-        products.add("Mobile");
+        product.add("java");
+        product.add("python");
+        product.add("selenium");
+        product.add("java");
+        product.add("java");
+        product.add("python");
 
-        System.out.println(products);
-
-        System.out.println("Total elements are: " + products.size());
-
-        for(int i=0; i<products.size();i++){
+        for(int i=0; i< product.size(); i++){
 
             boolean alreadyPrinted = false;
 
-            for(int j=i+1; j < products.size();j++){
+            for(int j= 0; j < i; j++){
 
-                if(products.get(i).equals(products.get(j))){
+                if(product.get(i).equals(product.get(j))){
 
                     alreadyPrinted = true;
-                    break;
                 }
             }
 
             if(!alreadyPrinted){
 
-                for(int j = i+1; j< products.size();j++){
-                    if(products.get(i).equals(products.get(j))){
-                        System.out.println("Duplicate: " + products.get(j));
+                for(int j= i+1; j< product.size();j++){
+                    if(product.get(i).equals(product.get(j))){
+                        System.out.println("Duplicate String is: " + product.get(i));
                         break;
                     }
                 }
