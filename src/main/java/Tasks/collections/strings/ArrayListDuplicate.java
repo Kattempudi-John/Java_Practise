@@ -1,4 +1,4 @@
-package Tasks.collections;
+package Tasks.collections.strings;
 
 import java.util.ArrayList;
 import java.util.List;
